@@ -3,129 +3,135 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FotoImage Beograd - izrada, skeniranje i štampa fotografija</title>
-<meta name="description" content="FotoImage Beograd - izrada fotografija, skeniranje, razvijanje filmova, štampa velikog formata, slike za dokumenta i fotokopiranje. Poruči online ili preuzmi aplikaciju.">
+<title>FotoImage Beograd - izrada fotografija u Svetogorskoj 4</title>
+<meta name="description" content="Izrada fotografija od 9x13 do 60x120 cm, slike za dokumenta za 5 minuta, skeniranje, razvijanje filma i fotokopiranje. Svetogorska 4, Beograd. Do 50% popusta na veće porudžbine.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root{
     --accent:#c90707;
-    --accent-dark:#8c0505;
-    --accent-soft:#fbe8e8;
-    --accent-glow:rgba(201,7,7,0.14);
+    --accent-dark:#9e0505;
+    --accent-deep:#5c0303;
+    --accent-soft:#fcebeb;
+    --accent-tint:#fdf5f5;
+    --accent-glow:rgba(201,7,7,0.16);
     --bg:#ffffff;
-    --bg-off:#fdf8f8;
-    --text:#1c1414;
-    --text-muted:rgba(28,20,20,0.68);
-    --text-faint:rgba(28,20,20,0.45);
-    --border:rgba(28,20,20,0.1);
-    --radius-btn:10px;
-    --radius-card:20px;
+    --bg-off:#faf7f6;
+    --ink:#1a1212;
+    --text:#1a1212;
+    --text-muted:rgba(26,18,18,0.68);
+    --text-faint:rgba(26,18,18,0.48);
+    --border:rgba(26,18,18,0.1);
+    --radius-btn:999px;
+    --radius-card:24px;
+    --radius-sm:12px;
+    --shadow-lift:0 24px 48px rgba(26,18,18,0.1);
   }
 
   *{box-sizing:border-box;margin:0;padding:0;}
-
   html{scroll-behavior:smooth;}
-
   body{
     font-family:'Montserrat', sans-serif;
+    font-size:16px;
+    line-height:1.6;
     color:var(--text);
     background:var(--bg);
-    font-weight:400;
-    line-height:1.6;
     -webkit-font-smoothing:antialiased;
     overflow-x:hidden;
   }
-
-  h1,h2,h3{
+  h1,h2,h3,h4{
     font-family:'Quicksand', sans-serif;
     font-weight:700;
-    line-height:1.2;
+    line-height:1.15;
     color:var(--text);
+    letter-spacing:-0.01em;
   }
-
   img{max-width:100%;display:block;}
-
   a{color:inherit;text-decoration:none;}
+  p{color:var(--text-muted);max-width:65ch;}
 
   .wrap{
     max-width:1280px;
-    margin:0 auto;
-    padding-left:24px;
-    padding-right:24px;
+    margin-left:auto;
+    margin-right:auto;
+    padding-left:32px;
+    padding-right:32px;
   }
-
   @media (max-width:768px){
     .wrap{padding-left:20px;padding-right:20px;}
   }
 
-  section{
-    padding-top:96px;
-    padding-bottom:96px;
-  }
-
+  .section{padding-top:128px;padding-bottom:128px;}
   @media (max-width:768px){
-    section{padding-top:64px;padding-bottom:64px;}
+    .section{padding-top:80px;padding-bottom:80px;}
   }
-
-  p{color:var(--text-muted);max-width:65ch;}
 
   .eyebrow{
-    display:inline-block;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
     font-family:'Quicksand', sans-serif;
-    font-weight:600;
-    font-size:0.82rem;
-    letter-spacing:0.08em;
+    font-weight:700;
+    font-size:12px;
+    letter-spacing:0.12em;
     text-transform:uppercase;
     color:var(--accent);
-    margin-bottom:14px;
+    margin-bottom:16px;
+  }
+  .eyebrow::before{
+    content:"";
+    width:24px;
+    height:2px;
+    background:var(--accent);
   }
 
+  .section-head{max-width:720px;margin-bottom:56px;}
+  .section-head h2{font-size:48px;margin-bottom:16px;}
+  .section-head p{font-size:20px;}
+  @media (max-width:768px){
+    .section-head{margin-bottom:40px;}
+    .section-head h2{font-size:32px;}
+    .section-head p{font-size:16px;}
+  }
+
+  /* DUGMAD: primarno (puno), sekundarno (obrub), tercijarno (tekst link) */
   .btn{
     display:inline-flex;
     align-items:center;
     justify-content:center;
-    gap:8px;
-    padding:15px 30px;
+    gap:12px;
+    padding-top:16px;
+    padding-bottom:16px;
+    padding-left:28px;
+    padding-right:28px;
     border-radius:var(--radius-btn);
     font-family:'Quicksand', sans-serif;
     font-weight:700;
-    font-size:0.98rem;
+    font-size:16px;
+    line-height:1.2;
     border:2px solid transparent;
     cursor:pointer;
-    transition:transform 0.15s ease, box-shadow 0.2s ease, background 0.2s ease;
-    white-space:nowrap;
+    transition:background 0.2s ease, color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
   }
-
-  .btn-primary{
-    background:var(--accent);
-    color:#fff;
-  }
-  .btn-primary:hover{
-    background:var(--accent-dark);
-    box-shadow:0 10px 24px var(--accent-glow);
-    transform:translateY(-2px);
-  }
-
-  .btn-outline{
-    background:transparent;
+  .btn svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;}
+  .btn-primary{background:var(--accent);color:#fff;}
+  .btn-primary:hover{background:var(--accent-dark);box-shadow:0 12px 28px var(--accent-glow);transform:translateY(-2px);}
+  .btn-secondary{background:transparent;color:var(--accent);border-color:var(--accent);}
+  .btn-secondary:hover{background:var(--accent);color:#fff;}
+  .btn-link{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    font-family:'Quicksand', sans-serif;
+    font-weight:700;
+    font-size:16px;
     color:var(--accent);
-    border-color:var(--accent);
   }
-  .btn-outline:hover{
-    background:var(--accent-soft);
-    transform:translateY(-2px);
-  }
-
-  .btn-dark{
-    background:var(--text);
-    color:#fff;
-  }
-  .btn-dark:hover{
-    background:#000;
-    transform:translateY(-2px);
-  }
+  .btn-link svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;transition:transform 0.2s ease;}
+  .btn-link:hover svg{transform:translateX(4px);}
+  .on-dark .btn-secondary{color:#fff;border-color:rgba(255,255,255,0.6);}
+  .on-dark .btn-secondary:hover{background:#fff;color:var(--accent);border-color:#fff;}
 
   /* HEADER */
   header{
@@ -133,61 +139,48 @@
     top:0;
     z-index:100;
     background:#fff;
-    border-bottom:1px solid var(--border);
+    border-bottom:1px solid transparent;
+    transition:background 0.2s ease, border-color 0.2s ease;
   }
   header.scrolled{
-    background:rgba(255,255,255,0.85);
-    backdrop-filter:blur(10px);
-    -webkit-backdrop-filter:blur(10px);
+    background:rgba(255,255,255,0.86);
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+    border-bottom-color:var(--border);
   }
-
   nav.wrap{
     display:flex;
     align-items:center;
     justify-content:space-between;
-    padding-top:16px;
-    padding-bottom:16px;
+    gap:32px;
+    padding-top:20px;
+    padding-bottom:20px;
     position:relative;
   }
-
-  .logo img{
-    height:42px;
-    width:auto;
-  }
-
-  .nav-desktop{
-    display:flex;
-    align-items:center;
-    gap:36px;
-  }
-
-  .nav-links{
-    display:flex;
-    gap:30px;
-    list-style:none;
-  }
-
+  .logo img{height:32px;width:auto;}
+  .nav-menu{display:flex;align-items:center;gap:40px;}
+  .nav-links{display:flex;gap:32px;list-style:none;}
   .nav-links a{
     font-family:'Quicksand', sans-serif;
     font-weight:600;
-    font-size:0.95rem;
+    font-size:16px;
     color:var(--text);
     transition:color 0.2s ease;
   }
   .nav-links a:hover{color:var(--accent);}
+  .nav-cta{padding-top:12px;padding-bottom:12px;padding-left:24px;padding-right:24px;}
 
   .hamburger{
     display:none;
     flex-direction:column;
     justify-content:center;
     align-items:center;
-    gap:5px;
-    width:40px;
-    height:40px;
+    gap:4px;
+    width:44px;
+    height:44px;
     background:none;
     border:none;
     cursor:pointer;
-    z-index:110;
   }
   .hamburger span{
     display:block;
@@ -196,687 +189,1184 @@
     background:var(--text);
     transition:transform 0.25s ease, opacity 0.25s ease;
   }
-  .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+  .hamburger.open span:nth-child(1){transform:translateY(6px) rotate(45deg);}
   .hamburger.open span:nth-child(2){opacity:0;}
-  .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+  .hamburger.open span:nth-child(3){transform:translateY(-6px) rotate(-45deg);}
 
   @media (max-width:991px){
-    .nav-desktop{
+    .hamburger{display:flex;}
+    .nav-menu{
       position:absolute;
       top:100%;
       left:0;
       right:0;
       background:#fff;
       flex-direction:column;
-      align-items:flex-start;
-      gap:20px;
-      padding:28px 20px 32px;
+      align-items:stretch;
+      gap:24px;
+      padding-top:24px;
+      padding-bottom:32px;
+      padding-left:20px;
+      padding-right:20px;
       border-bottom:1px solid var(--border);
-      box-shadow:0 12px 24px rgba(0,0,0,0.06);
-      transform:translateY(-8px);
+      box-shadow:0 16px 32px rgba(26,18,18,0.08);
       opacity:0;
+      transform:translateY(-8px);
       pointer-events:none;
-      transition:transform 0.2s ease, opacity 0.2s ease;
+      transition:opacity 0.2s ease, transform 0.2s ease;
     }
-    .nav-desktop.open{
-      transform:translateY(0);
-      opacity:1;
-      pointer-events:auto;
-    }
-    .nav-links{
-      flex-direction:column;
-      gap:16px;
-      width:100%;
-    }
-    .hamburger{display:flex;}
+    .nav-menu.open{opacity:1;transform:translateY(0);pointer-events:auto;}
+    .nav-links{flex-direction:column;gap:16px;}
+    .nav-links a{font-size:20px;}
   }
 
   /* HERO */
-  #hero{
-    padding-top:90px;
-    padding-bottom:90px;
+  .hero{
+    padding-top:64px;
+    padding-bottom:128px;
     background:
-      radial-gradient(600px 400px at 85% 0%, var(--accent-glow), transparent 70%),
-      var(--bg-off);
-    border-bottom:1px solid var(--border);
+      radial-gradient(640px 480px at 88% 16%, var(--accent-glow), transparent 70%),
+      linear-gradient(180deg, #fff 0%, var(--bg-off) 100%);
+    overflow:hidden;
   }
   .hero-grid{
     display:grid;
-    grid-template-columns:1.1fr 0.9fr;
-    gap:56px;
+    grid-template-columns:1.05fr 0.95fr;
+    gap:64px;
     align-items:center;
   }
-  .hero-content h1{
-    font-size:clamp(2.2rem, 4.5vw, 3.4rem);
-    margin-bottom:20px;
+  .hero h1{
+    font-size:64px;
+    line-height:1.08;
+    margin-bottom:24px;
+    max-width:14ch;
   }
-  .hero-content p{
-    font-size:1.08rem;
-    margin-bottom:32px;
-    max-width:52ch;
-  }
-  .hero-visual{
-    background:#efe1e1;
-    border:1px solid var(--border);
-    border-radius:var(--radius-card);
-    aspect-ratio:4/3;
+  .hero h1 em{font-style:normal;color:var(--accent);}
+  .hero-lead{font-size:20px;margin-bottom:40px;max-width:48ch;}
+  .hero-actions{display:flex;align-items:center;gap:24px;flex-wrap:wrap;}
+  .hero-actions .btn-link{color:var(--text);}
+  .hero-actions .btn-link span{color:var(--accent);}
+  .hero-facts{
     display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-top:48px;
+    list-style:none;
+  }
+  .hero-facts li{
+    display:inline-flex;
     align-items:center;
-    justify-content:center;
-    text-align:center;
-    color:var(--text-faint);
+    gap:8px;
+    padding-top:8px;
+    padding-bottom:8px;
+    padding-left:16px;
+    padding-right:16px;
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:var(--radius-btn);
+    font-size:12px;
+    font-weight:600;
+    color:var(--text);
+  }
+  .hero-facts svg{width:16px;height:16px;stroke:var(--accent);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+
+  .hero-visual{position:relative;height:560px;}
+  .print{
+    position:absolute;
+    background:#fff;
+    padding-top:12px;
+    padding-left:12px;
+    padding-right:12px;
+    padding-bottom:48px;
+    border-radius:4px;
+    box-shadow:0 32px 64px rgba(26,18,18,0.18), 0 4px 12px rgba(26,18,18,0.06);
+  }
+  .print img{width:100%;height:100%;object-fit:cover;border-radius:2px;}
+  .print figcaption{
+    position:absolute;
+    left:16px;
+    right:16px;
+    bottom:12px;
     font-family:'Quicksand', sans-serif;
     font-weight:600;
+    font-size:12px;
+    color:var(--text-faint);
     letter-spacing:0.04em;
-    padding:24px;
+  }
+  .print-front figcaption{text-align:right;}
+  .print-back{
+    width:60%;
+    height:320px;
+    top:24px;
+    left:0;
+    transform:rotate(-6deg);
+  }
+  .print-front{
+    width:64%;
+    height:420px;
+    top:120px;
+    right:0;
+    transform:rotate(4deg);
+  }
+  .price-tag{
+    position:absolute;
+    left:8%;
+    bottom:32px;
+    background:var(--ink);
+    color:#fff;
+    border-radius:var(--radius-card);
+    padding-top:20px;
+    padding-bottom:20px;
+    padding-left:24px;
+    padding-right:24px;
+    box-shadow:var(--shadow-lift);
+    z-index:2;
+  }
+  .price-tag small{
+    display:block;
+    font-size:12px;
+    color:rgba(255,255,255,0.64);
+    font-weight:500;
+    margin-bottom:4px;
+  }
+  .price-tag strong{
+    font-family:'Quicksand', sans-serif;
+    font-size:28px;
+    line-height:1.2;
+  }
+  .price-tag strong span{font-size:16px;color:rgba(255,255,255,0.72);font-weight:600;}
+
+  @media (max-width:1100px){
+    .hero h1{font-size:56px;}
+  }
+  @media (max-width:991px){
+    .hero-grid{grid-template-columns:1fr;gap:56px;}
+    .hero-visual{height:480px;max-width:560px;width:100%;margin-left:auto;margin-right:auto;}
+  }
+  @media (max-width:768px){
+    .hero{padding-top:40px;padding-bottom:80px;}
+    .hero h1{font-size:40px;}
+    .hero-lead{font-size:16px;margin-bottom:32px;}
+    .hero-facts{margin-top:32px;}
+    .hero-visual{height:380px;}
+    .print-front figcaption{text-align:right;}
+  .print-back{height:220px;}
+    .print-front{height:300px;top:88px;}
+    .price-tag{left:0;bottom:12px;padding-top:16px;padding-bottom:16px;padding-left:20px;padding-right:20px;}
+    .price-tag strong{font-size:24px;}
+    .print-front figcaption{display:none;}
+    .print-back{left:4%;}
   }
 
+  /* BOL */
+  .pain{background:var(--ink);color:#fff;}
+  .pain-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:64px;
+    align-items:center;
+  }
+  .pain h2{color:#fff;font-size:48px;}
+  .pain h2 span{color:#ff8a8a;}
+  .pain p{color:rgba(255,255,255,0.72);font-size:20px;}
+  .pain p + p{margin-top:16px;}
+  .pain p strong{color:#fff;font-weight:600;}
   @media (max-width:900px){
-    .hero-grid{grid-template-columns:1fr;}
-    .hero-visual{order:-1;aspect-ratio:16/10;}
-  }
-
-  /* BOL INTRO */
-  #bol{
-    background:var(--bg);
-    border-bottom:1px solid var(--border);
-  }
-  #bol .inner{
-    max-width:760px;
-  }
-  #bol h2{
-    font-size:clamp(1.6rem, 3vw, 2.1rem);
-    margin-bottom:18px;
-  }
-  #bol p{
-    font-size:1.05rem;
-    max-width:70ch;
-  }
-
-  /* SECTION HEADERS */
-  .section-head{
-    max-width:640px;
-    margin-bottom:52px;
-  }
-  .section-head h2{
-    font-size:clamp(1.8rem, 3.4vw, 2.5rem);
-    margin-bottom:14px;
+    .pain-grid{grid-template-columns:1fr;gap:32px;}
+    .pain h2{font-size:32px;}
+    .pain p{font-size:16px;}
   }
 
   /* USLUGE */
-  #usluge{
-    background:var(--bg-off);
-    border-bottom:1px solid var(--border);
-  }
-  .services-grid{
+  .services{background:var(--bg);}
+  .feature{
     display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
-    gap:24px;
+    grid-template-columns:1fr 1fr;
+    gap:0;
+    background:var(--bg-off);
+    border-radius:var(--radius-card);
+    overflow:hidden;
+    margin-bottom:24px;
   }
-  .service-card{
+  .feature-img{min-height:100%;}
+  .sizes{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding-top:48px;
+    padding-bottom:48px;
+    padding-left:48px;
+    padding-right:48px;
+    background:
+      radial-gradient(360px 280px at 30% 80%, var(--accent-glow), transparent 70%),
+      var(--accent-soft);
+  }
+  .sizes svg{width:100%;max-width:400px;height:auto;overflow:visible;}
+  .sizes rect{fill:#fff;stroke:rgba(26,18,18,0.12);stroke-width:1;filter:drop-shadow(0 8px 16px rgba(92,3,3,0.08));}
+  .sizes rect.s1{fill:var(--accent);stroke:none;}
+  .sizes text{font-family:'Quicksand', sans-serif;font-weight:700;font-size:8px;fill:var(--text-faint);}
+  .sizes text.t1{fill:#fff;}
+  .feature-img img{width:100%;height:100%;object-fit:cover;}
+  .feature-body{
+    padding-top:56px;
+    padding-bottom:56px;
+    padding-left:56px;
+    padding-right:56px;
+  }
+  .feature-body h3{font-size:32px;margin-bottom:16px;}
+  .feature-body > p{margin-bottom:32px;}
+  .format-list{list-style:none;margin-bottom:32px;}
+  .format-list li{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    gap:16px;
+    padding-top:12px;
+    padding-bottom:12px;
+    border-bottom:1px dashed rgba(26,18,18,0.16);
+    font-size:16px;
+  }
+  .format-list li span:first-child{font-weight:600;}
+  .format-list li span:last-child{font-family:'Quicksand', sans-serif;font-weight:700;color:var(--accent);white-space:nowrap;}
+  .format-note{font-size:12px;color:var(--text-faint);margin-top:-16px;margin-bottom:32px;}
+  @media (max-width:900px){
+    .feature{grid-template-columns:1fr;}
+    .sizes{padding-top:32px;padding-bottom:32px;padding-left:32px;padding-right:32px;}
+    .sizes svg{max-width:240px;}
+    .feature-body{padding-top:32px;padding-bottom:32px;padding-left:24px;padding-right:24px;}
+    .feature-body h3{font-size:28px;}
+  }
+
+  .photo-cards{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:24px;
+    margin-bottom:24px;
+  }
+  .photo-card{
+    display:flex;
+    flex-direction:column;
     background:#fff;
     border:1px solid var(--border);
     border-radius:var(--radius-card);
-    padding:32px 26px;
+    overflow:hidden;
     transition:box-shadow 0.25s ease, transform 0.25s ease;
-    opacity:1;
-    transform:translateY(0);
   }
-  .service-card:hover{
-    box-shadow:0 18px 40px rgba(28,20,20,0.08);
-    transform:translateY(-4px);
-  }
-  .icon-badge{
-    width:52px;
-    height:52px;
-    border-radius:14px;
-    background:var(--accent-soft);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    margin-bottom:20px;
-  }
-  .icon-badge svg{
-    width:26px;
-    height:26px;
-    stroke:var(--accent);
-    fill:none;
-    stroke-width:1.7;
-    stroke-linecap:round;
-    stroke-linejoin:round;
-  }
-  .service-card h3{
-    font-size:1.15rem;
-    margin-bottom:10px;
-  }
-  .service-card p{
-    font-size:0.95rem;
-    max-width:100%;
-  }
-
-  /* CENOVNIK + AKCIJE */
-  #cenovnik-akcije{
-    background:var(--bg);
-    border-bottom:1px solid var(--border);
-  }
-  .cards-2col{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:28px;
-  }
-  .panel{
-    border-radius:var(--radius-card);
-    padding:44px 36px;
-    border:1px solid var(--border);
-  }
-  .panel.accent{
-    background:linear-gradient(180deg, var(--accent-soft), #fff);
-  }
-  .panel h3{
-    font-size:1.5rem;
-    margin-bottom:16px;
-  }
-  .panel p{
-    margin-bottom:26px;
-  }
-
-  @media (max-width:768px){
-    .cards-2col{grid-template-columns:1fr;}
-  }
-
-  /* O BRENDU */
-  #o-nama{
-    background:var(--bg-off);
-    border-bottom:1px solid var(--border);
-  }
-  .about-grid{
-    display:grid;
-    grid-template-columns:0.9fr 1.1fr;
-    gap:56px;
-    align-items:center;
-  }
-  .about-image{
-    background:#efe1e1;
-    border:1px solid var(--border);
-    border-radius:var(--radius-card);
-    aspect-ratio:4/3;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    color:var(--text-faint);
-    font-family:'Quicksand', sans-serif;
-    font-weight:600;
-    letter-spacing:0.04em;
-    padding:24px;
-  }
-  .about-text h2{
-    font-size:clamp(1.8rem, 3.2vw, 2.3rem);
-    margin-bottom:18px;
-  }
-  .about-text p{margin-bottom:16px;max-width:58ch;}
-  .about-points{
-    list-style:none;
-    margin-top:24px;
+  .photo-card:hover{box-shadow:var(--shadow-lift);transform:translateY(-4px);}
+  .photo-card .img{aspect-ratio:16/10;overflow:hidden;}
+  .photo-card .img img{width:100%;height:100%;object-fit:cover;transition:transform 0.5s ease;}
+  .photo-card:hover .img img{transform:scale(1.04);}
+  .card-body{
     display:flex;
     flex-direction:column;
-    gap:14px;
+    flex:1;
+    padding-top:28px;
+    padding-bottom:28px;
+    padding-left:28px;
+    padding-right:28px;
   }
-  .about-points li{
-    display:flex;
-    align-items:flex-start;
-    gap:12px;
+  .card-body h3{font-size:20px;margin-bottom:8px;}
+  .card-body p{font-size:16px;margin-bottom:24px;}
+  .from{
+    margin-top:auto;
+    padding-top:16px;
+    border-top:1px solid var(--border);
+    font-size:12px;
+    color:var(--text-faint);
     font-weight:600;
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+  }
+  .from strong{
+    display:block;
     font-family:'Quicksand', sans-serif;
-    font-size:0.98rem;
-  }
-  .about-points svg{
-    width:20px;
-    height:20px;
-    stroke:var(--accent);
-    fill:none;
-    stroke-width:2;
-    flex-shrink:0;
-    margin-top:2px;
+    font-size:20px;
+    color:var(--text);
+    text-transform:none;
+    letter-spacing:0;
+    margin-top:4px;
   }
 
-  @media (max-width:900px){
-    .about-grid{grid-template-columns:1fr;}
-  }
-
-  /* APLIKACIJA */
-  #aplikacija{
-    background:var(--text);
-    color:#fff;
-    border-bottom:1px solid var(--border);
-  }
-  .app-grid{
+  .icon-cards{
     display:grid;
-    grid-template-columns:1.1fr 0.9fr;
-    gap:56px;
-    align-items:center;
+    grid-template-columns:repeat(4, 1fr);
+    gap:24px;
   }
-  #aplikacija h2{color:#fff;}
-  #aplikacija p{color:rgba(255,255,255,0.72);}
-  .app-buttons{
+  .icon-card{
     display:flex;
-    align-items:center;
-    gap:18px;
-    margin-top:30px;
-    flex-wrap:wrap;
-  }
-  .app-badge img{height:52px;width:auto;}
-  .app-visual{
-    background:rgba(255,255,255,0.06);
-    border:1px solid rgba(255,255,255,0.14);
+    flex-direction:column;
+    background:var(--bg-off);
     border-radius:var(--radius-card);
-    aspect-ratio:4/3;
+    padding-top:32px;
+    padding-bottom:28px;
+    padding-left:28px;
+    padding-right:28px;
+    transition:background 0.25s ease;
+  }
+  .icon-card:hover{background:var(--accent-soft);}
+  .icon-badge{
+    width:48px;
+    height:48px;
+    border-radius:var(--radius-sm);
+    background:#fff;
     display:flex;
     align-items:center;
     justify-content:center;
-    text-align:center;
-    color:rgba(255,255,255,0.45);
-    font-family:'Quicksand', sans-serif;
-    font-weight:600;
-    letter-spacing:0.04em;
-    padding:24px;
+    margin-bottom:24px;
+  }
+  .icon-badge svg{width:24px;height:24px;stroke:var(--accent);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
+  .icon-card h3{font-size:20px;margin-bottom:8px;}
+  .icon-card p{font-size:16px;margin-bottom:24px;}
+  .icon-card .from{border-top-color:rgba(26,18,18,0.12);}
+
+  @media (max-width:1100px){
+    .icon-cards{grid-template-columns:repeat(2, 1fr);}
+  }
+  @media (max-width:900px){
+    .photo-cards{grid-template-columns:1fr;}
+  }
+  @media (max-width:600px){
+    .icon-cards{grid-template-columns:1fr;}
   }
 
+  /* POPUST */
+  .discount{background:var(--accent-tint);}
+  .discount-grid{
+    display:grid;
+    grid-template-columns:0.9fr 1.1fr;
+    gap:64px;
+    align-items:start;
+  }
+  .discount-copy h2{font-size:48px;margin-bottom:24px;}
+  .discount-copy > p{font-size:20px;margin-bottom:40px;}
+  .packs{display:grid;grid-template-columns:repeat(3, 1fr);gap:12px;margin-bottom:32px;}
+  .pack{
+    background:#fff;
+    border-radius:var(--radius-sm);
+    padding-top:20px;
+    padding-bottom:20px;
+    padding-left:16px;
+    padding-right:16px;
+    border:1px solid var(--border);
+  }
+  .pack .n{
+    font-family:'Quicksand', sans-serif;
+    font-weight:700;
+    font-size:28px;
+    line-height:1.1;
+    color:var(--accent);
+  }
+  .pack .l{font-size:12px;color:var(--text-faint);font-weight:600;margin-bottom:12px;}
+  .pack .p{font-family:'Quicksand', sans-serif;font-weight:700;font-size:16px;}
+  .deals{list-style:none;display:flex;flex-direction:column;gap:12px;margin-bottom:40px;}
+  .deals li{display:flex;align-items:center;gap:12px;font-weight:600;}
+  .deals svg{width:20px;height:20px;stroke:var(--accent);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;}
+
+  .ladder{
+    background:#fff;
+    border-radius:var(--radius-card);
+    padding-top:40px;
+    padding-bottom:40px;
+    padding-left:40px;
+    padding-right:40px;
+    box-shadow:0 24px 64px rgba(201,7,7,0.08);
+  }
+  .ladder-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    gap:16px;
+    margin-bottom:32px;
+  }
+  .ladder-head h3{font-size:24px;}
+  .ladder-head span{font-size:12px;color:var(--text-faint);font-weight:600;}
+  .rung{
+    display:grid;
+    grid-template-columns:112px 1fr 88px;
+    align-items:center;
+    gap:16px;
+    margin-bottom:16px;
+  }
+  .rung:last-of-type{margin-bottom:0;}
+  .rung .qty{font-size:12px;font-weight:600;color:var(--text-muted);}
+  .bar{height:12px;border-radius:999px;background:var(--accent-soft);overflow:hidden;}
+  .bar i{display:block;height:100%;border-radius:999px;background:var(--accent);}
+  .rung .val{font-family:'Quicksand', sans-serif;font-weight:700;text-align:right;white-space:nowrap;}
+  .rung.best .qty{color:var(--accent);}
+  .rung.best .val{color:var(--accent);}
+  .ladder-note{margin-top:32px;font-size:12px;color:var(--text-faint);max-width:none;}
+
+  @media (max-width:991px){
+    .discount-grid{grid-template-columns:1fr;gap:48px;}
+  }
+  @media (max-width:768px){
+    .discount-copy h2{font-size:32px;}
+    .discount-copy > p{font-size:16px;}
+    .ladder{padding-top:28px;padding-bottom:28px;padding-left:20px;padding-right:20px;}
+    .ladder-head{flex-direction:column;gap:4px;}
+    .rung{grid-template-columns:88px 1fr 72px;gap:12px;}
+  }
+  @media (max-width:480px){
+    .packs{gap:8px;}
+    .pack{padding-top:16px;padding-bottom:16px;padding-left:12px;padding-right:12px;}
+    .pack .n{font-size:24px;}
+    .pack .l{margin-bottom:8px;}
+  }
+
+  /* KAKO PORUČITI */
+  .order{background:var(--ink);color:#fff;position:relative;overflow:hidden;}
+  .order::before{
+    content:"";
+    position:absolute;
+    width:720px;
+    height:720px;
+    right:-240px;
+    top:-320px;
+    background:radial-gradient(circle, rgba(201,7,7,0.36), transparent 64%);
+    pointer-events:none;
+  }
+  .order .wrap{position:relative;}
+  .order .section-head h2{color:#fff;}
+  .order .section-head p{color:rgba(255,255,255,0.72);}
+  .order .eyebrow{color:#ff8a8a;}
+  .order .eyebrow::before{background:#ff8a8a;}
+  .steps{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:24px;
+    list-style:none;
+    counter-reset:step;
+    margin-bottom:56px;
+  }
+  .step{
+    border:1px solid rgba(255,255,255,0.14);
+    border-radius:var(--radius-card);
+    padding-top:32px;
+    padding-bottom:32px;
+    padding-left:32px;
+    padding-right:32px;
+    counter-increment:step;
+  }
+  .step::before{
+    content:"0" counter(step);
+    display:block;
+    font-family:'Quicksand', sans-serif;
+    font-weight:700;
+    font-size:40px;
+    line-height:1;
+    color:var(--accent);
+    margin-bottom:24px;
+  }
+  .step h3{color:#fff;font-size:20px;margin-bottom:8px;}
+  .step p{color:rgba(255,255,255,0.68);font-size:16px;}
+  .step a{color:#fff;text-decoration:underline;text-underline-offset:4px;text-decoration-color:rgba(255,255,255,0.4);}
+  .order-cta{display:flex;align-items:center;gap:24px;flex-wrap:wrap;}
+  .play-badge img{height:64px;width:auto;}
   @media (max-width:900px){
-    .app-grid{grid-template-columns:1fr;}
-    .app-visual{order:-1;aspect-ratio:16/9;}
+    .steps{grid-template-columns:1fr;}
+  }
+
+  /* CENOVNIK */
+  .pricing{background:var(--bg);}
+  .pricing-grid{
+    display:grid;
+    grid-template-columns:0.8fr 1.2fr;
+    gap:64px;
+    align-items:start;
+  }
+  .pricing-grid .section-head{margin-bottom:0;position:sticky;top:120px;}
+  .pricing-grid .section-head .btn{margin-top:32px;}
+  .acc{border-top:1px solid var(--border);}
+  .acc details{border-bottom:1px solid var(--border);}
+  .acc summary{
+    list-style:none;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:16px;
+    padding-top:24px;
+    padding-bottom:24px;
+    cursor:pointer;
+    font-family:'Quicksand', sans-serif;
+    font-weight:700;
+    font-size:20px;
+  }
+  .acc summary::-webkit-details-marker{display:none;}
+  .acc summary small{
+    font-family:'Montserrat', sans-serif;
+    font-weight:500;
+    font-size:12px;
+    color:var(--text-faint);
+    margin-left:auto;
+    white-space:nowrap;
+  }
+  .acc summary .plus{
+    width:32px;
+    height:32px;
+    border-radius:999px;
+    background:var(--bg-off);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-shrink:0;
+    transition:transform 0.2s ease, background 0.2s ease;
+  }
+  .acc summary .plus svg{width:16px;height:16px;stroke:var(--accent);fill:none;stroke-width:2.4;stroke-linecap:round;}
+  .acc details[open] summary .plus{transform:rotate(45deg);background:var(--accent-soft);}
+  .acc summary:hover{color:var(--accent);}
+  .acc-body{padding-bottom:32px;overflow-x:auto;}
+  .acc-body > p{font-size:12px;color:var(--text-faint);margin-top:16px;}
+  table{width:100%;border-collapse:collapse;font-size:16px;}
+  th, td{padding-top:12px;padding-bottom:12px;padding-left:8px;padding-right:8px;text-align:left;border-bottom:1px solid var(--border);}
+  th{font-size:12px;font-weight:600;color:var(--text-faint);text-transform:uppercase;letter-spacing:0.06em;}
+  td:last-child, th:last-child{text-align:right;}
+  td.num{font-family:'Quicksand', sans-serif;font-weight:700;white-space:nowrap;}
+  .price-matrix th, .price-matrix td{text-align:right;white-space:nowrap;}
+  .price-matrix th:first-child, .price-matrix td:first-child{text-align:left;}
+  .price-matrix td{font-family:'Quicksand', sans-serif;font-weight:600;}
+  .price-matrix td:first-child{font-family:'Montserrat', sans-serif;font-weight:500;color:var(--text-muted);}
+  .price-matrix tr.hl td{color:var(--accent);}
+  @media (max-width:991px){
+    .pricing-grid{grid-template-columns:1fr;gap:40px;}
+    .pricing-grid .section-head{position:static;}
+  }
+  @media (max-width:600px){
+    .acc summary{font-size:16px;}
+    .acc summary small{display:none;}
+    table{font-size:12px;}
+    .price-matrix th, .price-matrix td{padding-left:4px;padding-right:4px;}
+  }
+
+  /* ZAŠTO MI + UTISCI */
+  .trust{background:var(--bg-off);}
+  .trust-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:64px;
+    align-items:start;
+  }
+  .trust h2{font-size:48px;margin-bottom:24px;}
+  .trust-copy > p{font-size:20px;margin-bottom:40px;}
+  .promises{list-style:none;display:flex;flex-direction:column;gap:24px;}
+  .promises li{display:grid;grid-template-columns:48px 1fr;gap:20px;align-items:start;}
+  .promises .icon-badge{margin-bottom:0;}
+  .promises h3{font-size:20px;margin-bottom:4px;}
+  .promises p{font-size:16px;}
+
+  .quotes{display:flex;flex-direction:column;gap:24px;}
+  .quote{
+    background:#fff;
+    border-radius:var(--radius-card);
+    padding-top:40px;
+    padding-bottom:40px;
+    padding-left:40px;
+    padding-right:40px;
+    box-shadow:0 16px 40px rgba(26,18,18,0.06);
+  }
+  .stars{display:flex;align-items:center;gap:4px;margin-bottom:20px;}
+  .stars svg{width:20px;height:20px;fill:var(--accent);}
+  .stars span{margin-left:8px;font-size:12px;font-weight:700;color:var(--text-faint);}
+  .quote blockquote{
+    font-family:'Quicksand', sans-serif;
+    font-weight:600;
+    font-size:20px;
+    line-height:1.5;
+    color:var(--text);
+    margin-bottom:24px;
+  }
+  .quote cite{display:flex;align-items:center;gap:12px;font-style:normal;font-weight:600;}
+  .quote cite .av{
+    width:40px;
+    height:40px;
+    border-radius:999px;
+    background:var(--accent-soft);
+    color:var(--accent);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:'Quicksand', sans-serif;
+    font-weight:700;
+    font-size:16px;
+  }
+  .quote cite small{display:block;font-weight:500;font-size:12px;color:var(--text-faint);}
+  @media (max-width:991px){
+    .trust-grid{grid-template-columns:1fr;gap:56px;}
+  }
+  @media (max-width:768px){
+    .trust h2{font-size:32px;}
+    .trust-copy > p{font-size:16px;}
+    .quote{padding-top:28px;padding-bottom:28px;padding-left:24px;padding-right:24px;}
+    .quote blockquote{font-size:16px;}
   }
 
   /* KONTAKT */
-  #kontakt{
-    background:var(--bg-off);
-  }
-  .contact-grid{
+  .contact{background:var(--bg);}
+  .contact-card{
     display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:56px;
-    align-items:start;
+    grid-template-columns:1.1fr 0.9fr;
+    border-radius:32px;
+    overflow:hidden;
+    background:var(--accent);
+    color:#fff;
+    position:relative;
   }
-  .contact-form{
-    display:flex;
-    flex-direction:column;
-    gap:16px;
+  .contact-main{
+    padding-top:72px;
+    padding-bottom:72px;
+    padding-left:64px;
+    padding-right:64px;
+    background:
+      radial-gradient(560px 360px at 0% 100%, rgba(92,3,3,0.5), transparent 70%);
   }
-  .contact-form input,
-  .contact-form textarea{
-    width:100%;
-    padding:14px 16px;
-    border:1px solid var(--border);
-    border-radius:var(--radius-btn);
-    font-family:'Montserrat', sans-serif;
-    font-size:0.96rem;
+  .contact-main .eyebrow{color:#fff;}
+  .contact-main .eyebrow::before{background:#fff;}
+  .contact-main h2{color:#fff;font-size:48px;margin-bottom:20px;}
+  .contact-main p{color:rgba(255,255,255,0.84);font-size:20px;margin-bottom:40px;}
+  .contact-actions{display:flex;gap:16px;flex-wrap:wrap;}
+  .contact-main .btn-primary{background:#fff;color:var(--accent);}
+  .contact-main .btn-primary:hover{background:var(--accent-soft);box-shadow:0 12px 28px rgba(0,0,0,0.16);}
+
+  .contact-side{
     background:#fff;
     color:var(--text);
-  }
-  .contact-form input:focus,
-  .contact-form textarea:focus{
-    outline:none;
-    border-color:var(--accent);
-  }
-  .contact-form textarea{resize:vertical;min-height:120px;}
-
-  .contact-map{
-    background:#efe1e1;
-    border:1px solid var(--border);
-    border-radius:var(--radius-card);
-    aspect-ratio:4/3;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    color:var(--text-faint);
-    font-family:'Quicksand', sans-serif;
-    font-weight:600;
-    letter-spacing:0.04em;
-    padding:24px;
-    margin-bottom:24px;
-  }
-  .contact-info{
+    margin-top:12px;
+    margin-bottom:12px;
+    margin-right:12px;
+    border-radius:24px;
+    padding-top:48px;
+    padding-bottom:48px;
+    padding-left:40px;
+    padding-right:40px;
     display:flex;
     flex-direction:column;
-    gap:14px;
+    gap:28px;
   }
-  .contact-info-item{
-    display:flex;
-    align-items:center;
-    gap:12px;
-    font-weight:600;
-    font-family:'Quicksand', sans-serif;
-    font-size:0.98rem;
+  .info-row{display:grid;grid-template-columns:24px 1fr;gap:16px;align-items:start;}
+  .info-row svg{width:24px;height:24px;stroke:var(--accent);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;margin-top:4px;}
+  .info-row .k{font-size:12px;font-weight:600;color:var(--text-faint);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:4px;}
+  .info-row .v{font-family:'Quicksand', sans-serif;font-weight:700;font-size:20px;line-height:1.4;}
+  .info-row .v a:hover{color:var(--accent);}
+  .info-row .v small{display:block;font-family:'Montserrat', sans-serif;font-weight:500;font-size:16px;color:var(--text-muted);}
+  .hours{width:100%;font-size:16px;}
+  .hours td{border:none;padding-top:4px;padding-bottom:4px;padding-left:0;padding-right:0;font-weight:500;color:var(--text-muted);}
+  .hours td:last-child{font-family:'Quicksand', sans-serif;font-weight:700;color:var(--text);}
+  .hours tr.closed td:last-child{color:var(--text-faint);}
+  @media (max-width:991px){
+    .contact-card{grid-template-columns:1fr;}
+    .contact-side{margin-top:0;margin-left:12px;}
   }
-  .contact-info-item svg{
-    width:20px;
-    height:20px;
-    stroke:var(--accent);
-    fill:none;
-    stroke-width:1.8;
-    flex-shrink:0;
-  }
-
-  @media (max-width:900px){
-    .contact-grid{grid-template-columns:1fr;}
-  }
-
-  /* CLOSING CTA */
-  #zatvaranje{
-    background:var(--accent);
-    text-align:center;
-  }
-  #zatvaranje h2{
-    color:#fff;
-    font-size:clamp(1.8rem, 3.4vw, 2.4rem);
-    margin-bottom:16px;
-  }
-  #zatvaranje p{
-    color:rgba(255,255,255,0.85);
-    margin:0 auto 32px;
-  }
-  .zatvaranje-btns{
-    display:flex;
-    justify-content:center;
-    gap:16px;
-    flex-wrap:wrap;
-  }
-  #zatvaranje .btn-outline{
-    color:#fff;
-    border-color:#fff;
-  }
-  #zatvaranje .btn-outline:hover{
-    background:rgba(255,255,255,0.15);
-  }
-  #zatvaranje .btn-dark{
-    background:#fff;
-    color:var(--accent);
-  }
-  #zatvaranje .btn-dark:hover{
-    background:#f3e6e6;
+  @media (max-width:768px){
+    .contact-card{border-radius:24px;}
+    .contact-main{padding-top:48px;padding-bottom:48px;padding-left:24px;padding-right:24px;}
+    .contact-main h2{font-size:32px;}
+    .contact-main p{font-size:16px;}
+    .contact-actions .btn{width:100%;}
+    .contact-side{margin-left:8px;margin-right:8px;margin-bottom:8px;border-radius:20px;padding-top:32px;padding-bottom:32px;padding-left:24px;padding-right:24px;}
   }
 
   /* FOOTER */
-  footer{
-    background:#fff;
-    border-top:1px solid var(--border);
-    padding-top:56px;
-    padding-bottom:32px;
-  }
+  footer{border-top:1px solid var(--border);padding-top:64px;padding-bottom:32px;}
   .footer-top{
+    display:grid;
+    grid-template-columns:1.4fr 1fr 1fr 1fr;
+    gap:40px;
+    margin-bottom:48px;
+  }
+  .footer-brand img{height:28px;width:auto;margin-bottom:16px;}
+  .footer-brand p{font-size:16px;max-width:32ch;}
+  .footer-col h4{font-size:16px;margin-bottom:16px;}
+  .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:8px;}
+  .footer-col a{font-size:16px;color:var(--text-muted);transition:color 0.2s ease;}
+  .footer-col a:hover{color:var(--accent);}
+  .socials{display:flex;gap:12px;margin-top:24px;}
+  .socials a{
+    width:40px;
+    height:40px;
+    border-radius:999px;
+    border:1px solid var(--border);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition:border-color 0.2s ease, background 0.2s ease;
+  }
+  .socials a:hover{border-color:var(--accent);background:var(--accent-soft);}
+  .socials svg{width:20px;height:20px;stroke:var(--accent);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
+  .footer-bottom{
     display:flex;
     justify-content:space-between;
-    align-items:flex-start;
+    gap:16px;
     flex-wrap:wrap;
-    gap:36px;
-    margin-bottom:36px;
-  }
-  .footer-logo img{height:38px;margin-bottom:14px;}
-  .footer-top p{max-width:36ch;font-size:0.92rem;}
-  .footer-links{
-    display:flex;
-    gap:48px;
-    flex-wrap:wrap;
-  }
-  .footer-col h4{
-    font-family:'Quicksand', sans-serif;
-    font-size:0.95rem;
-    margin-bottom:14px;
-  }
-  .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:10px;}
-  .footer-col a{
-    font-size:0.9rem;
-    color:var(--text-muted);
-    transition:color 0.2s ease;
-  }
-  .footer-col a:hover{color:var(--accent);}
-  .footer-bottom{
     border-top:1px solid var(--border);
     padding-top:24px;
-    font-size:0.82rem;
+    font-size:12px;
     color:var(--text-faint);
-    text-align:center;
+  }
+  @media (max-width:900px){
+    .footer-top{grid-template-columns:1fr 1fr;}
+    .footer-brand{grid-column:1 / -1;}
   }
 
-  /* REVEAL */
-  .reveal{
-    opacity:1;
-    transform:translateY(0);
-    transition:opacity 0.6s ease, transform 0.6s ease;
-  }
-  .reveal.pre{
-    opacity:1;
-    transform:translateY(12px);
-  }
-  .reveal.in-view{
-    opacity:1;
-    transform:translateY(0);
+  /* REVEAL: sadržaj je uvek vidljiv, JS samo dodaje mali pomeraj */
+  .reveal{transition:transform 0.6s ease;}
+  .reveal.pre{transform:translateY(12px);}
+  .reveal.in{transform:translateY(0);}
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto;}
+    .reveal, .reveal.pre{transform:none;transition:none;}
   }
 </style>
 </head>
 <body>
 
 <header id="site-header">
-  <nav class="wrap">
-    <a href="#hero" class="logo">
-      <img src="assets/logo.png" alt="FotoImage logo">
+  <nav class="wrap" aria-label="Glavni meni">
+    <a href="#pocetak" class="logo">
+      <img src="assets/logo.png" alt="FotoImage Beograd" width="315" height="50">
     </a>
-    <button class="hamburger" id="hamburgerBtn" aria-label="Otvori meni" aria-expanded="false">
-      <span></span>
-      <span></span>
-      <span></span>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Otvori meni" aria-expanded="false" aria-controls="navMenu">
+      <span></span><span></span><span></span>
     </button>
-    <div class="nav-desktop" id="navMenu">
+    <div class="nav-menu" id="navMenu">
       <ul class="nav-links">
-        <li><a href="#hero">Početna</a></li>
         <li><a href="#usluge">Usluge</a></li>
+        <li><a href="#popust">Popusti</a></li>
+        <li><a href="#kako-poruciti">Kako poručiti</a></li>
         <li><a href="#cenovnik">Cenovnik</a></li>
-        <li><a href="#akcije">Akcije</a></li>
-        <li><a href="#o-nama">O nama</a></li>
         <li><a href="#kontakt">Kontakt</a></li>
       </ul>
-      <a href="#aplikacija" class="btn btn-primary">Poruči fotografije online</a>
+      <a href="https://play.google.com/store/apps/details?id=com.s8.fotoimage" target="_blank" rel="noopener" class="btn btn-primary nav-cta">Preuzmi aplikaciju</a>
     </div>
   </nav>
 </header>
 
-<main>
+<main id="pocetak">
 
   <!-- HERO -->
-  <section id="hero">
+  <section class="hero">
     <div class="wrap hero-grid">
       <div class="hero-content">
-        <span class="eyebrow">FotoImage Beograd</span>
-        <h1>Fotografije i dokumenta, sređeni na jednom mestu</h1>
-        <p>Izrađujemo fotografije, skeniramo stare albume, razvijamo filmove i štampamo dokumenta. Brzo, po fer ceni, bez čekanja u redu.</p>
-        <a href="#aplikacija" class="btn btn-primary">Preuzmi aplikaciju i poruči fotografije</a>
+        <span class="eyebrow">Foto radnja u Svetogorskoj 4</span>
+        <h1>Fotografije kakve si zamislio. <em>Ili ih radimo ponovo.</em></h1>
+        <p class="hero-lead">Izrađujemo slike sa telefona, kartice, USB-a i filma, od 9x13 do 60x120 cm. Pošalji ih iz aplikacije i preuzmi u radnji. Što veća porudžbina, to niža cena, do 50% popusta.</p>
+        <div class="hero-actions">
+          <a href="https://play.google.com/store/apps/details?id=com.s8.fotoimage" target="_blank" rel="noopener" class="btn btn-primary">
+            Preuzmi aplikaciju i pošalji slike
+            <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg>
+          </a>
+          <a href="tel:+381113245982" class="btn-link">ili pozovi <span>011 3245 982</span></a>
+        </div>
+        <ul class="hero-facts">
+          <li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg>Slike za dokumenta za 5 minuta</li>
+          <li><svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="13" rx="2"/><circle cx="12" cy="12.5" r="3.5"/><path d="M8 6l1.5-2h5L16 6"/></svg>Fuji mašine, mat i glanc papir</li>
+          <li><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.3-7-11a7 7 0 0 1 14 0c0 4.7-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Centar grada</li>
+        </ul>
       </div>
-      <div class="hero-visual" aria-hidden="true">
-        FOTOGRAFIJE IZ RADNJE FOTOIMAGE
+
+      <div class="hero-visual" aria-label="Izrađene fotografije">
+        <figure class="print print-back">
+          <img src="assets/razvijanje-filma.jpg" alt="Rolna filma pored starog analognog fotoaparata" width="740" height="416">
+          <figcaption>135 film, razvijen</figcaption>
+        </figure>
+        <figure class="print print-front">
+          <img src="assets/izrada-fotografija.jpg" alt="Ruka slaže izrađene fotografije u boji po stolu" width="600" height="600">
+          <figcaption>10x15, glanc papir</figcaption>
+        </figure>
+        <div class="price-tag">
+          <small>Fotografija 10x15, preko 380 kom</small>
+          <strong>16,95 <span>din/kom</span></strong>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- BOL UVOD -->
-  <section id="bol">
-    <div class="wrap inner">
-      <h2>Poznato ti je ovo?</h2>
-      <p>Slike ti stoje zarobljene na telefonu, stari filmovi čekaju u fioci već godinama, a za sliku za ličnu kartu nemaš vremena da obilaziš grad. Dovodiš sve to kod nas i rešiš za jedan dan, bez čekanja u redu i bez skupih iznenađenja.</p>
+  <!-- BOL -->
+  <section class="section pain">
+    <div class="wrap pain-grid">
+      <h2>Na telefonu hiljade slika. <span>U albumu nijedna.</span></h2>
+      <div>
+        <p>Stari filmovi stoje u fioci, a nerazvijen film ima rok trajanja. Porodične slike blede u kutiji. A slika za pasoš ti treba do sutra.</p>
+        <p><strong>Sve to rešavaš na jednom pultu u Svetogorskoj 4, od ponedeljka do subote.</strong></p>
+      </div>
     </div>
   </section>
 
   <!-- USLUGE -->
-  <section id="usluge">
+  <section class="section services" id="usluge">
     <div class="wrap">
       <div class="section-head">
-        <span class="eyebrow">Šta radimo</span>
-        <h2>Sve što ti treba od fotografije i dokumenta</h2>
-        <p>Od jedne slike za pasoš do plakata za izlog, sve pokrivamo na jednom mestu.</p>
+        <span class="eyebrow">Usluge</span>
+        <h2>Od slike za ličnu kartu do postera od 60x120 cm</h2>
+        <p>Uz svaku uslugu stoji početna cena, da znaš koliko plaćaš pre nego što dođeš.</p>
       </div>
-      <div class="services-grid">
 
-        <div class="service-card reveal">
-          <div class="icon-badge">
-            <svg viewBox="0 0 24 24"><path d="M4 8h3l2-2h6l2 2h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>
-          </div>
+      <article class="feature reveal">
+        <div class="feature-img sizes" aria-label="Formati fotografija u pravoj razmeri: 9x13, 10x15, 13x18 i 15x21 cm">
+          <svg viewBox="0 0 200 250" aria-hidden="true">
+            <rect x="20" y="20" width="150" height="210" rx="2"/>
+            <rect x="20" y="50" width="130" height="180" rx="2"/>
+            <rect x="20" y="80" width="100" height="150" rx="2"/>
+            <rect class="s1" x="20" y="100" width="90" height="130" rx="2"/>
+            <text x="164" y="34" text-anchor="end">15x21</text>
+            <text x="144" y="64" text-anchor="end">13x18</text>
+            <text x="114" y="94" text-anchor="end">10x15</text>
+            <text class="t1" x="104" y="114" text-anchor="end">9x13</text>
+          </svg>
+        </div>
+        <div class="feature-body">
           <h3>Izrada fotografija</h3>
-          <p>Pošalji slike sa telefona, foto-aparata ili društvenih mreža i podigni gotove otiske istog dana.</p>
+          <p>Kolor, crno-bele i sepia, na mat ili glanc papiru. U radnji prvo pregledaš sve slike i sam biraš koje idu na izradu. Kad žuri, reci nam i uradimo ekspresno.</p>
+          <ul class="format-list">
+            <li><span>9x13 cm</span><span>31,90 din</span></li>
+            <li><span>10x15 cm</span><span>33,90 din</span></li>
+            <li><span>13x18 cm</span><span>51,90 din</span></li>
+            <li><span>15x21 cm</span><span>63,90 din</span></li>
+            <li><span>20x30 do 60x80 cm</span><span>od 290 din</span></li>
+          </ul>
+          <p class="format-note">Cena po komadu za 4 do 29 fotografija. Za 30 i više kreće popust, do 50%.</p>
+          <a href="#popust" class="btn-link">Izračunaj popust za svoju porudžbinu
+            <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg>
+          </a>
         </div>
+      </article>
 
-        <div class="service-card reveal">
-          <div class="icon-badge">
-            <svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="14" rx="1"/><circle cx="9" cy="10" r="1.8"/><path d="M4 16l4.5-4.5L12 15l3-3 5 5"/></svg>
+      <div class="photo-cards">
+        <article class="photo-card reveal">
+          <div class="img"><img src="assets/skeniranje-starih-fotografija.jpg" alt="Stare crno-bele porodične fotografije na stolu" width="800" height="460" loading="lazy"></div>
+          <div class="card-body">
+            <h3>Skeniranje i restauracija</h3>
+            <p>Skeniramo slike, slajdove i negative do 1200 dpi. Uklanjamo ogrebotine, fleke, tragove savijanja i selotejpa.</p>
+            <div class="from">Skeniranje fotografije<strong>150 din</strong></div>
           </div>
-          <h3>Skeniranje i obrada fotografija</h3>
-          <p>Stare slike i albume skeniramo u visokoj rezoluciji i po potrebi popravljamo boje i oštećenja.</p>
-        </div>
+        </article>
+        <article class="photo-card reveal">
+          <div class="img"><img src="assets/stampa-ploter.jpg" alt="Ploter štampa veliki poster u boji" width="940" height="627" loading="lazy"></div>
+          <div class="card-body">
+            <h3>Štampa velikog formata</h3>
+            <p>Posteri, reklame i fotografije do 60x120 cm, štampane na ploteru. Kvadratni i panoramski format takođe.</p>
+            <div class="from">Format 20x30 cm<strong>290 din</strong></div>
+          </div>
+        </article>
+        <article class="photo-card reveal">
+          <div class="img"><img src="assets/fotokopiranje.jpg" alt="Osoba stavlja dokument u fotokopir aparat" width="800" height="533" loading="lazy"></div>
+          <div class="card-body">
+            <h3>Fotokopiranje i štampa</h3>
+            <p>A4 i A3, crno-belo ili u boji. Donesi fajl na USB-u, telefonu ili ga pošalji mejlom.</p>
+            <div class="from">A4 kopija, preko 100 kom<strong>10 din</strong></div>
+          </div>
+        </article>
+      </div>
 
-        <div class="service-card reveal">
-          <div class="icon-badge">
-            <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="1"/><line x1="3" y1="8" x2="21" y2="8"/><line x1="3" y1="16" x2="21" y2="16"/><line x1="7" y1="4" x2="7" y2="8"/><line x1="7" y1="16" x2="7" y2="20"/><line x1="17" y1="4" x2="17" y2="8"/><line x1="17" y1="16" x2="17" y2="20"/></svg>
-          </div>
-          <h3>Razvijanje filmova</h3>
-          <p>Radimo klasično razvijanje analognog filma, sa otiscima ili bez njih, po tvom izboru.</p>
-        </div>
-
-        <div class="service-card reveal">
-          <div class="icon-badge">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2.2"/></svg>
-          </div>
-          <h3>Prebacivanje na CD/DVD</h3>
-          <p>Fotografije i video zapise prebacujemo na CD ili DVD, spremne za čuvanje ili za poklon.</p>
-        </div>
-
-        <div class="service-card reveal">
-          <div class="icon-badge">
-            <svg viewBox="0 0 24 24"><rect x="4" y="8" width="16" height="9" rx="1"/><path d="M7 8V5h10v3"/><rect x="8" y="14" width="8" height="5"/></svg>
-          </div>
-          <h3>Štampa velikog formata</h3>
-          <p>Štampamo plakate, planove i bilborde na širokom papiru, tačno po meri koja ti treba.</p>
-        </div>
-
-        <div class="service-card reveal">
-          <div class="icon-badge">
-            <svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="2"/><circle cx="8" cy="12" r="2.4"/><line x1="13" y1="10" x2="18" y2="10"/><line x1="13" y1="14" x2="18" y2="14"/></svg>
-          </div>
+      <div class="icon-cards">
+        <article class="icon-card reveal">
+          <div class="icon-badge"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><circle cx="12" cy="10" r="3"/><path d="M7 18c1-2.4 2.8-3.5 5-3.5s4 1.1 5 3.5"/></svg></div>
           <h3>Slike za dokumenta</h3>
-          <p>Slikamo za ličnu kartu, pasoš i vizu, po propisanim merama, gotovo za par minuta.</p>
-        </div>
-
-        <div class="service-card reveal">
-          <div class="icon-badge">
-            <svg viewBox="0 0 24 24"><rect x="6" y="3" width="12" height="7" rx="1"/><rect x="4" y="10" width="16" height="8" rx="1"/><rect x="8" y="14" width="8" height="6"/></svg>
-          </div>
-          <h3>Fotokopiranje i štampa</h3>
-          <p>Kopiramo i štampamo dokumenta, u boji ili crno-belo, pojedinačno ili u više primeraka.</p>
-        </div>
-
+          <p>Pasoš, lična karta, vozačka, vize, GSP i indeks. Gotovo za 5 minuta, slikamo dok ne budeš zadovoljan.</p>
+          <div class="from">4 slike<strong>700 din</strong></div>
+        </article>
+        <article class="icon-card reveal">
+          <div class="icon-badge"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="1"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/><line x1="7" y1="5" x2="7" y2="9"/><line x1="12" y1="5" x2="12" y2="9"/><line x1="17" y1="5" x2="17" y2="9"/><line x1="7" y1="15" x2="7" y2="19"/><line x1="12" y1="15" x2="12" y2="19"/><line x1="17" y1="15" x2="17" y2="19"/></svg></div>
+          <h3>Razvijanje filma</h3>
+          <p>Filmovi 110, 120, 135 i APS. Kolor negativ C41 i crno-beli film.</p>
+          <div class="from">Po filmu<strong>700 din</strong></div>
+        </article>
+        <article class="icon-card reveal">
+          <div class="icon-badge"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="11" rx="2"/><circle cx="8.5" cy="12.5" r="2"/><circle cx="15.5" cy="12.5" r="2"/><line x1="10.5" y1="12.5" x2="13.5" y2="12.5"/></svg></div>
+          <h3>VHS i miniDV na USB</h3>
+          <p>Presnimavamo stare kasete i spasavamo podatke sa oštećenih memorijskih kartica.</p>
+          <div class="from">Po započetom satu<strong>500 din</strong></div>
+        </article>
+        <article class="icon-card reveal">
+          <div class="icon-badge"><svg viewBox="0 0 24 24"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 21V5"/><line x1="9" y1="8" x2="15" y2="8"/></svg></div>
+          <h3>Foto knjiga i pokloni</h3>
+          <p>Knjiga tvrdih korica sa 10, 20 ili 30 strana na foto papiru. Pored nje šolja, magnet i slagalica sa tvojom slikom.</p>
+          <div class="from">Cena<strong>na upit</strong></div>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- CENOVNIK + AKCIJE -->
-  <section id="cenovnik-akcije">
+  <!-- POPUST -->
+  <section class="section discount" id="popust">
+    <div class="wrap discount-grid">
+      <div class="discount-copy">
+        <span class="eyebrow">Količinski popust</span>
+        <h2>Što više slika, to niža cena</h2>
+        <p>Popust se računa sam, na broj fotografija u porudžbini. Za 380 i više slika plaćaš pola cene.</p>
+        <div class="packs">
+          <div class="pack"><div class="n">50</div><div class="l">slika 10x15</div><div class="p">847,50 din</div></div>
+          <div class="pack"><div class="n">100</div><div class="l">slika 10x15</div><div class="p">1.695 din</div></div>
+          <div class="pack"><div class="n">200</div><div class="l">slika 10x15</div><div class="p">3.390 din</div></div>
+        </div>
+        <ul class="deals">
+          <li><svg viewBox="0 0 24 24"><rect x="2" y="7" width="13" height="10" rx="1"/><path d="M15 10h4l3 3v4h-7z"/><circle cx="6.5" cy="18" r="1.5"/><circle cx="18" cy="18" r="1.5"/></svg>Akcija: besplatna dostava fotografija</li>
+          <li><svg viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="13" rx="1"/><path d="M12 8v13"/><path d="M3 12h18"/><path d="M12 8c-2-4-6-4-6-1.5S10 8 12 8c2 0 6-1 6-1.5S14 4 12 8z"/></svg>Akcija: foto knjiga na poklon</li>
+        </ul>
+        <a href="https://play.google.com/store/apps/details?id=com.s8.fotoimage" target="_blank" rel="noopener" class="btn btn-primary">Pošalji slike iz aplikacije</a>
+      </div>
+
+      <div class="ladder reveal" aria-label="Cena fotografije 10x15 po količini">
+        <div class="ladder-head">
+          <h3>Cena jedne slike 10x15</h3>
+          <span>dinara po komadu</span>
+        </div>
+        <div class="rung"><span class="qty">4 - 29 kom</span><div class="bar"><i style="width:100%"></i></div><span class="val">33,90</span></div>
+        <div class="rung"><span class="qty">30 - 69 kom</span><div class="bar"><i style="width:90%"></i></div><span class="val">30,51</span></div>
+        <div class="rung"><span class="qty">70 - 139 kom</span><div class="bar"><i style="width:80%"></i></div><span class="val">27,12</span></div>
+        <div class="rung"><span class="qty">140 - 279 kom</span><div class="bar"><i style="width:70%"></i></div><span class="val">23,73</span></div>
+        <div class="rung"><span class="qty">280 - 379 kom</span><div class="bar"><i style="width:60%"></i></div><span class="val">20,34</span></div>
+        <div class="rung best"><span class="qty">380+ kom</span><div class="bar"><i style="width:50%"></i></div><span class="val">16,95</span></div>
+        <p class="ladder-note">Popust od 10% do 50% važi i za 9x13, 13x18 i 15x21. Sve cene su u cenovniku ispod.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- KAKO PORUČITI -->
+  <section class="section order on-dark" id="kako-poruciti">
     <div class="wrap">
       <div class="section-head">
-        <span class="eyebrow">Cene i pogodnosti</span>
-        <h2>Bez skrivenih troškova</h2>
+        <span class="eyebrow">Kako poručiti</span>
+        <h2>Pošalji slike od kuće, preuzmi ih u radnji</h2>
+        <p>Ne moraš da nosiš telefon u radnju i čekaš da se slike prebace.</p>
       </div>
-      <div class="cards-2col">
-        <div class="panel" id="cenovnik">
-          <h3>Cenovnik</h3>
-          <p>Cena zavisi od formata, papira i broja komada. Pošalji upit i javljamo ti tačan iznos isti dan, bez obaveze da poručiš.</p>
-          <a href="#kontakt" class="btn btn-outline">Pošalji upit za cenu</a>
-        </div>
-        <div class="panel accent" id="akcije">
-          <h3>Akcije i popusti</h3>
-          <p>Akcije menjamo svakog meseca, za veće porudžbine, praznike i redovne kupce. Trenutnu akciju uvek vidiš u aplikaciji, pre nego što odeš u radnju.</p>
-          <a href="#aplikacija" class="btn btn-primary">Pogledaj akcije u aplikaciji</a>
-        </div>
+      <ol class="steps">
+        <li class="step reveal">
+          <h3>Pošalji slike</h3>
+          <p>Iz Android aplikacije ili mejlom na <a href="mailto:fotoimage.bg@gmail.com">fotoimage.bg@gmail.com</a>. Može i lično, na USB-u, kartici, CD-u ili filmu.</p>
+        </li>
+        <li class="step reveal">
+          <h3>Izaberi format i papir</h3>
+          <p>Mat ili glanc, od 9x13 do 60x120 cm. Ako nisi siguran koji format ide za koju sliku, pitaj nas.</p>
+        </li>
+        <li class="step reveal">
+          <h3>Preuzmi u Svetogorskoj 4</h3>
+          <p>USB, CD ili film koji doneseš vraćamo ti zajedno sa gotovim fotografijama.</p>
+        </li>
+      </ol>
+      <div class="order-cta">
+        <a href="https://play.google.com/store/apps/details?id=com.s8.fotoimage" target="_blank" rel="noopener" class="play-badge">
+          <img src="assets/en_badge_web_generic-300x116.png" alt="Preuzmi FotoImage aplikaciju na Google Play" width="300" height="116">
+        </a>
+        <a href="mailto:fotoimage.bg@gmail.com" class="btn btn-secondary">Pošalji slike mejlom</a>
       </div>
     </div>
   </section>
 
-  <!-- O BRENDU -->
-  <section id="o-nama">
-    <div class="wrap about-grid">
-      <div class="about-image" aria-hidden="true">
-        FOTOGRAFIJA RADNJE FOTOIMAGE
+  <!-- CENOVNIK -->
+  <section class="section pricing" id="cenovnik">
+    <div class="wrap pricing-grid">
+      <div class="section-head">
+        <span class="eyebrow">Cenovnik</span>
+        <h2>Sve cene na jednom mestu</h2>
+        <p>Cene su u dinarima. Ako ti treba nešto čega nema na listi, pozovi i reći ćemo ti cenu odmah.</p>
+        <a href="tel:+381113245982" class="btn btn-secondary">
+          <svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.4 2.1L8 9.9a16 16 0 0 0 6 6l1.4-1.4a2 2 0 0 1 2.1-.4c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.8 2.2z"/></svg>
+          Pitaj za cenu: 011 3245 982
+        </a>
       </div>
-      <div class="about-text">
-        <span class="eyebrow">Ko smo</span>
-        <h2>Radnja u kojoj se poznaješ sa ljudima za pultom</h2>
-        <p>FotoImage je foto studio i radnja u Beogradu koja se bavi izradom, skeniranjem, razvijanjem i štampom fotografija i dokumenata.</p>
-        <p>Radimo praktično: dođeš sa slikama ili filmom, kažeš šta ti treba i dobiješ konkretan rok. Bez komplikovanja, bez sitnih slova u cenovniku.</p>
-        <ul class="about-points">
+
+      <div class="acc">
+        <details open>
+          <summary>Izrada fotografija <small>od 15,95 din</small><span class="plus"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
+          <div class="acc-body">
+            <table class="price-matrix">
+              <thead><tr><th>Količina</th><th>9x13</th><th>10x15</th><th>13x18</th><th>15x21</th></tr></thead>
+              <tbody>
+                <tr><td>1 - 3 kom</td><td>69,90</td><td>79,90</td><td>89,90</td><td>99,90</td></tr>
+                <tr><td>4 - 29 kom</td><td>31,90</td><td>33,90</td><td>51,90</td><td>63,90</td></tr>
+                <tr><td>30 - 69 (-10%)</td><td>28,71</td><td>30,51</td><td>46,71</td><td>57,51</td></tr>
+                <tr><td>70 - 139 (-20%)</td><td>25,52</td><td>27,12</td><td>41,52</td><td>51,12</td></tr>
+                <tr><td>140 - 279 (-30%)</td><td>22,33</td><td>23,73</td><td>36,33</td><td>44,73</td></tr>
+                <tr><td>280 - 379 (-40%)</td><td>19,14</td><td>20,34</td><td>31,14</td><td>38,34</td></tr>
+                <tr class="hl"><td>380+ (-50%)</td><td>15,95</td><td>16,95</td><td>25,95</td><td>31,95</td></tr>
+              </tbody>
+            </table>
+            <table style="margin-top:24px;">
+              <thead><tr><th>Veliki format</th><th>Cena po komadu</th></tr></thead>
+              <tbody>
+                <tr><td>20x30 cm</td><td class="num">290,00</td></tr>
+                <tr><td>30x30 cm</td><td class="num">390,00</td></tr>
+                <tr><td>30x40 cm</td><td class="num">490,00</td></tr>
+                <tr><td>30x60 cm</td><td class="num">790,00</td></tr>
+                <tr><td>30x90 cm</td><td class="num">990,00</td></tr>
+                <tr><td>40x60 cm</td><td class="num">1.090,00</td></tr>
+                <tr><td>60x80 cm</td><td class="num">1.990,00</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </details>
+
+        <details>
+          <summary>Slike za dokumenta <small>od 450 din</small><span class="plus"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
+          <div class="acc-body">
+            <table>
+              <tbody>
+                <tr><td>4 kom, slikamo u radnji</td><td class="num">700,00</td></tr>
+                <tr><td>8 kom, slikamo u radnji</td><td class="num">750,00</td></tr>
+                <tr><td>4 kom sa tvoje fotografije</td><td class="num">450,00</td></tr>
+                <tr><td>8 kom sa tvoje fotografije</td><td class="num">500,00</td></tr>
+              </tbody>
+            </table>
+            <p>Pripremamo i digitalni format za američku vizu.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Skeniranje i obrada <small>od 80 din</small><span class="plus"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
+          <div class="acc-body">
+            <table>
+              <tbody>
+                <tr><td>Skeniranje slajda</td><td class="num">80,00</td></tr>
+                <tr><td>Skeniranje fotografije, 1200 dpi</td><td class="num">150,00</td></tr>
+                <tr><td>Skeniranje filma, 1500x1000 px</td><td class="num">300,00</td></tr>
+                <tr><td>Skeniranje filma, 2000x3000 px</td><td class="num">400,00</td></tr>
+                <tr><td>Obrada, nivo 1</td><td class="num">500,00</td></tr>
+                <tr><td>Obrada, nivo 2</td><td class="num">600,00</td></tr>
+                <tr><td>Obrada, nivo 3</td><td class="num">700,00</td></tr>
+              </tbody>
+            </table>
+            <p>Nivo obrade zavisi od toga koliko je fotografija oštećena. Donesi je i reći ćemo ti odmah.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Razvijanje filma i prebacivanje <small>od 400 din</small><span class="plus"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
+          <div class="acc-body">
+            <table>
+              <tbody>
+                <tr><td>Razvijanje filma</td><td class="num">700,00</td></tr>
+                <tr><td>Prebacivanje kartice na CD</td><td class="num">400,00</td></tr>
+                <tr><td>Prebacivanje kartice na DVD</td><td class="num">500,00</td></tr>
+                <tr><td>Prebacivanje na USB, do 4 GB</td><td class="num">400,00</td></tr>
+                <tr><td>Spasavanje kartice</td><td class="num">700,00</td></tr>
+                <tr><td>VHS, miniDV i sl., po započetom satu</td><td class="num">500,00</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </details>
+
+        <details>
+          <summary>Fotokopiranje i štampa <small>od 10 din</small><span class="plus"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
+          <div class="acc-body">
+            <table class="price-matrix">
+              <thead><tr><th>Kopiranje</th><th>1 kom</th><th>50+</th><th>100+</th></tr></thead>
+              <tbody>
+                <tr><td>A4</td><td>20,00</td><td>12,00</td><td>10,00</td></tr>
+                <tr><td>A4 obostrano</td><td>18,00</td><td>10,00</td><td>8,00</td></tr>
+                <tr><td>A3</td><td>35,00</td><td>22,00</td><td>20,00</td></tr>
+                <tr><td>A3 obostrano</td><td>32,00</td><td>19,00</td><td>18,00</td></tr>
+              </tbody>
+            </table>
+            <table class="price-matrix" style="margin-top:24px;">
+              <thead><tr><th>Štampa</th><th>1 kom</th><th>50+</th><th>100+</th></tr></thead>
+              <tbody>
+                <tr><td>A4 crno-belo</td><td>14,00</td><td>12,00</td><td>10,00</td></tr>
+                <tr><td>A3 crno-belo</td><td>28,00</td><td>24,00</td><td>20,00</td></tr>
+                <tr><td>A4 u boji</td><td>35,00</td><td>-</td><td>-</td></tr>
+                <tr><td>A3 u boji</td><td>70,00</td><td>-</td><td>-</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ZAŠTO MI + UTISCI -->
+  <section class="section trust" id="o-nama">
+    <div class="wrap trust-grid">
+      <div class="trust-copy">
+        <span class="eyebrow">Zašto FotoImage</span>
+        <h2>Ovde fotografi spremaju slike za izložbe</h2>
+        <p>Isti pult, iste mašine i isti ljudi rade i tvojih deset slika sa letovanja i katalog za nečiju izložbu.</p>
+        <ul class="promises">
           <li>
-            <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-            Sve usluge na jednom mestu, bez slanja od radnje do radnje
+            <div class="icon-badge"><svg viewBox="0 0 24 24"><polyline points="1 4 1 10 7 10"/><path d="M3.5 15a9 9 0 1 0 2.1-9.4L1 10"/></svg></div>
+            <div><h3>Ne valja, radimo ponovo</h3><p>Ako fotografije ne ispadnu kako si zamislio, izrađujemo nove.</p></div>
           </li>
           <li>
-            <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-            Jasni rokovi, bez naknadnih iznenađenja u ceni
+            <div class="icon-badge"><svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
+            <div><h3>Vidiš pre nego što platiš</h3><p>U radnji pregledaš sve slike i biraš samo one koje hoćeš da izradiš.</p></div>
           </li>
           <li>
-            <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-            Praktičan pristup - kažeš šta ti treba, mi ti kažemo kad je gotovo
+            <div class="icon-badge"><svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+            <div><h3>Ekspresno kad žuri</h3><p>Reci nam na pultu da ti je hitno i ubacujemo te preko reda.</p></div>
           </li>
         </ul>
       </div>
-    </div>
-  </section>
 
-  <!-- APLIKACIJA -->
-  <section id="aplikacija">
-    <div class="wrap app-grid">
-      <div class="app-content">
-        <span class="eyebrow">Naruči online</span>
-        <h2>Poruči iz fotelje, preuzmi u radnji</h2>
-        <p>Preko aplikacije pošalješ fotografije za izradu, pratiš status porudžbine i vidiš tekuće akcije. Kad je gotovo, samo prođeš do radnje i preuzmeš.</p>
-        <div class="app-buttons">
-          <a href="#" class="app-badge">
-            <img src="assets/en_badge_web_generic-300x116.png" alt="Preuzmi FotoImage aplikaciju na Google Play">
-          </a>
-          <a href="#kontakt" class="btn btn-outline" style="color:#fff;border-color:#fff;">Poruči bez aplikacije</a>
-        </div>
-      </div>
-      <div class="app-visual" aria-hidden="true">
-        PRIKAZ APLIKACIJE ZA PORUČIVANJE
+      <div class="quotes">
+        <figure class="quote reveal">
+          <div class="stars" aria-label="Ocena 5 od 5">
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.1 8.3 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 8.9 8.3"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.1 8.3 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 8.9 8.3"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.1 8.3 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 8.9 8.3"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.1 8.3 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 8.9 8.3"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.1 8.3 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 8.9 8.3"/></svg>
+            <span>5/5</span>
+          </div>
+          <blockquote>„Jedno od retkih mesta koje vodi računa o kvalitetu. Fotografi koriste njihove usluge. Kad spremaju materijal za izložbe, kataloge i monografije, obavezno dolaze na ovo mesto."</blockquote>
+          <figcaption><cite><span class="av" aria-hidden="true">MM</span><span>Miloje Mitrović<small>Klijent FotoImage radnje</small></span></cite></figcaption>
+        </figure>
+        <figure class="quote reveal">
+          <div class="stars" aria-label="Ocena 5 od 5">
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.1 8.3 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 8.9 8.3"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.1 8.3 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 8.9 8.3"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.1 8.3 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 8.9 8.3"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.1 8.3 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 8.9 8.3"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.1 8.3 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 8.9 8.3"/></svg>
+            <span>5/5</span>
+          </div>
+          <blockquote>„Izvanredno obrađuju fotografije koje vi izaberete, u kratkom vremenskom periodu. Ljubazno osoblje pruža vrhunsku uslugu."</blockquote>
+          <figcaption><cite><span class="av" aria-hidden="true">DC</span><span>Dragan Cvjetković<small>Klijent FotoImage radnje</small></span></cite></figcaption>
+        </figure>
       </div>
     </div>
   </section>
 
   <!-- KONTAKT -->
-  <section id="kontakt">
-    <div class="wrap contact-grid">
-      <div>
-        <span class="eyebrow">Kontakt</span>
-        <h2 style="font-size:clamp(1.8rem, 3.2vw, 2.3rem);margin-bottom:16px;">Pošalji upit ili navrati do radnje</h2>
-        <p style="margin-bottom:28px;">Javi nam šta ti treba, koliko komada i do kada. Odgovaramo isti dan.</p>
-        <form class="contact-form" action="#" method="post">
-          <input type="text" name="ime" placeholder="Ime i prezime" required>
-          <input type="email" name="email" placeholder="Email adresa" required>
-          <textarea name="poruka" placeholder="Šta ti treba - npr. skeniranje 40 slika, format 10x15" required></textarea>
-          <a href="#" class="btn btn-primary" style="width:fit-content;">Pošalji poruku</a>
-        </form>
-      </div>
-      <div>
-        <div class="contact-map" aria-hidden="true">
-          MAPA I LOKACIJA RADNJE
+  <section class="section contact" id="kontakt">
+    <div class="wrap">
+      <div class="contact-card on-dark">
+        <div class="contact-main">
+          <span class="eyebrow">Kontakt</span>
+          <h2>Svetogorska 4, u centru Beograda</h2>
+          <p>Pošalji slike iz aplikacije pa svrati po njih. Ili dođi sa telefonom, USB-om ili filmom i izradimo ih na licu mesta.</p>
+          <div class="contact-actions">
+            <a href="https://play.google.com/store/apps/details?id=com.s8.fotoimage" target="_blank" rel="noopener" class="btn btn-primary">Preuzmi aplikaciju</a>
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=Svetogorska+4+Beograd" target="_blank" rel="noopener" class="btn btn-secondary">
+              <svg viewBox="0 0 24 24"><path d="M12 21s-7-6.3-7-11a7 7 0 0 1 14 0c0 4.7-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              Otvori na mapi
+            </a>
+          </div>
         </div>
-        <div class="contact-info">
-          <div class="contact-info-item">
+
+        <div class="contact-side">
+          <div class="info-row">
             <svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.4 2.1L8 9.9a16 16 0 0 0 6 6l1.4-1.4a2 2 0 0 1 2.1-.4c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.8 2.2z"/></svg>
-            Pozovi radnju za brz odgovor
+            <div>
+              <div class="k">Telefon</div>
+              <div class="v"><a href="tel:+381113245982">011 3245 982</a><br><a href="tel:+381693245982">069 3245 982</a></div>
+            </div>
           </div>
-          <div class="contact-info-item">
+          <div class="info-row">
             <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><polyline points="3 7 12 13 21 7"/></svg>
-            Pošalji upit mejlom ili preko forme
+            <div>
+              <div class="k">Email</div>
+              <div class="v"><a href="mailto:fotoimage.bg@gmail.com">fotoimage.bg@gmail.com</a></div>
+            </div>
           </div>
-          <div class="contact-info-item">
-            <svg viewBox="0 0 24 24"><path d="M12 21s-7-6.3-7-11a7 7 0 0 1 14 0c0 4.7-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
-            Radnja u Beogradu, pogledaj mapu iznad
+          <div class="info-row">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg>
+            <div>
+              <div class="k">Radno vreme</div>
+              <table class="hours">
+                <tbody>
+                  <tr><td>Ponedeljak - petak</td><td>09 - 20h</td></tr>
+                  <tr><td>Subota</td><td>09 - 17h</td></tr>
+                  <tr class="closed"><td>Nedelja</td><td>zatvoreno</td></tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>
@@ -885,105 +1375,89 @@
 
 </main>
 
-<!-- ZATVARANJE -->
-<section id="zatvaranje">
-  <div class="wrap">
-    <h2>Spreman da rešiš fotografije i dokumenta danas?</h2>
-    <p>Poruči izradu online preko aplikacije ili nam pošalji upit, pa dogovorimo detalje.</p>
-    <div class="zatvaranje-btns">
-      <a href="#aplikacija" class="btn btn-dark">Preuzmi aplikaciju</a>
-      <a href="#kontakt" class="btn btn-outline">Pošalji upit za porudžbinu</a>
-    </div>
-  </div>
-</section>
-
 <footer>
   <div class="wrap">
     <div class="footer-top">
-      <div class="footer-logo">
-        <img src="assets/logo.png" alt="FotoImage logo">
-        <p>Foto studio i radnja u Beogradu za izradu, skeniranje i štampu fotografija i dokumenata.</p>
+      <div class="footer-brand">
+        <img src="assets/logo.png" alt="FotoImage Beograd" width="315" height="50">
+        <p>Foto radnja u Svetogorskoj 4. Izrada, skeniranje i štampa fotografija i dokumenata.</p>
+        <div class="socials">
+          <a href="https://www.facebook.com/fotoimage.bg" target="_blank" rel="noopener" aria-label="FotoImage na Facebooku">
+            <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/foto_image_bg/" target="_blank" rel="noopener" aria-label="FotoImage na Instagramu">
+            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/></svg>
+          </a>
+        </div>
       </div>
-      <div class="footer-links">
-        <div class="footer-col">
-          <h4>Usluge</h4>
-          <ul>
-            <li><a href="#usluge">Izrada fotografija</a></li>
-            <li><a href="#usluge">Skeniranje i obrada</a></li>
-            <li><a href="#usluge">Razvijanje filmova</a></li>
-            <li><a href="#usluge">Štampa velikog formata</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Stranica</h4>
-          <ul>
-            <li><a href="#cenovnik">Cenovnik</a></li>
-            <li><a href="#akcije">Akcije</a></li>
-            <li><a href="#o-nama">O nama</a></li>
-            <li><a href="#kontakt">Kontakt</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Naruči</h4>
-          <ul>
-            <li><a href="#aplikacija">Preuzmi aplikaciju</a></li>
-            <li><a href="#kontakt">Pošalji upit</a></li>
-          </ul>
-        </div>
+      <div class="footer-col">
+        <h4>Usluge</h4>
+        <ul>
+          <li><a href="#usluge">Izrada fotografija</a></li>
+          <li><a href="#usluge">Slike za dokumenta</a></li>
+          <li><a href="#usluge">Skeniranje i obrada</a></li>
+          <li><a href="#usluge">Razvijanje filma</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Cene</h4>
+        <ul>
+          <li><a href="#popust">Količinski popust</a></li>
+          <li><a href="#cenovnik">Cenovnik</a></li>
+          <li><a href="#kako-poruciti">Kako poručiti</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Kontakt</h4>
+        <ul>
+          <li><a href="tel:+381113245982">011 3245 982</a></li>
+          <li><a href="tel:+381693245982">069 3245 982</a></li>
+          <li><a href="mailto:fotoimage.bg@gmail.com">fotoimage.bg@gmail.com</a></li>
+        </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      &copy; 2024 FotoImage Beograd. Sva prava zadržana.
+      <span>&copy; 2026 FotoImage Beograd</span>
+      <span>Svetogorska 4, Beograd</span>
     </div>
   </div>
 </footer>
 
 <script>
-  // Hamburger meni
   var hamburgerBtn = document.getElementById('hamburgerBtn');
   var navMenu = document.getElementById('navMenu');
 
+  function setMenu(open){
+    navMenu.classList.toggle('open', open);
+    hamburgerBtn.classList.toggle('open', open);
+    hamburgerBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    hamburgerBtn.setAttribute('aria-label', open ? 'Zatvori meni' : 'Otvori meni');
+  }
   hamburgerBtn.addEventListener('click', function(){
-    var isOpen = navMenu.classList.toggle('open');
-    hamburgerBtn.classList.toggle('open', isOpen);
-    hamburgerBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    setMenu(!navMenu.classList.contains('open'));
+  });
+  navMenu.querySelectorAll('a').forEach(function(link){
+    link.addEventListener('click', function(){ setMenu(false); });
   });
 
-  document.querySelectorAll('#navMenu a').forEach(function(link){
-    link.addEventListener('click', function(){
-      navMenu.classList.remove('open');
-      hamburgerBtn.classList.remove('open');
-      hamburgerBtn.setAttribute('aria-expanded', 'false');
-    });
-  });
-
-  // Header senka pri skrolu
   var header = document.getElementById('site-header');
-  window.addEventListener('scroll', function(){
-    if(window.scrollY > 12){
-      header.classList.add('scrolled');
-    } else {
-      header.classList.remove('scrolled');
-    }
-  });
+  function onScroll(){ header.classList.toggle('scrolled', window.scrollY > 8); }
+  window.addEventListener('scroll', onScroll, { passive:true });
+  onScroll();
 
-  // Scroll-reveal
-  var revealEls = document.querySelectorAll('.reveal');
-  revealEls.forEach(function(el){ el.classList.add('pre'); });
-
-  if('IntersectionObserver' in window){
-    var observer = new IntersectionObserver(function(entries){
-      entries.forEach(function(entry){
-        if(entry.isIntersecting){
-          entry.target.classList.add('in-view');
-          observer.unobserve(entry.target);
-        }
+  if('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    var els = document.querySelectorAll('.reveal');
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
       });
-    }, { threshold: 0.15 });
-
-    revealEls.forEach(function(el){ observer.observe(el); });
-  } else {
-    revealEls.forEach(function(el){ el.classList.add('in-view'); });
+    }, { threshold:0.12 });
+    els.forEach(function(el){
+      if(el.getBoundingClientRect().top > window.innerHeight){
+        el.classList.add('pre');
+        io.observe(el);
+      }
+    });
   }
 </script>
 
